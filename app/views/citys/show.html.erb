@@ -16,7 +16,7 @@
       <div class="row">
         <% @posts.each do |post| %>
           <div class='col-sm-7 col-sm-offset-1'>
-            <h3><%=post.title%></h3>
+            <h3><%= link_to "#{post.title}", post_path(post) %></h3>
             <p><%=post.content%></p>
           </div>
         <% end %>
