@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-
   root to: "welcome#index"
+
 
   resources :sessions
   delete '/logout' => 'sessions#destroy'
@@ -10,4 +10,3 @@ Rails.application.routes.draw do
   resources :citys
 
 end
-

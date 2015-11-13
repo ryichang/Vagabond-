@@ -3,6 +3,7 @@ class CreateCities < ActiveRecord::Migration
     create_table :cities do |t|
       t.string :name
       t.string :image
+      t.references :posts
 
       t.timestamps null: false
     end
