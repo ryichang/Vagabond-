@@ -7,6 +7,8 @@ class CitysController < ApplicationController
 
   def show
     @city = City.find(params[:id])
+    @cities = City.all
+    @posts = Post.where(city_id: @city)
     render :show
   end
 

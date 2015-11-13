@@ -1,7 +1,5 @@
-<div class="jumbotron">City Name</div>
+<div class="jumbotron"><h1><%=@city.name%></h1></div>
 
-<h3>city description </br>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id placerat lorem. Integer a facilisis massa, gravida efficitur risus. Donec porttitor mi malesuada rhoncus convallis. Praesent sit amet consequat nisi. In id lacus viverra, bibendum lorem at, gravida quam. Donec sit amet mattis metus. Nulla consectetur nisi in cursus sagittis. Phasellus mollis nibh ac mauris pretium, quis rhoncus magna rutrum. Duis id arcu id metus facilisis lobortis. Phasellus condimentum ut turpis id efficitur. Sed ut vulputate justo. Nulla facilisis lacus id nulla finibus, nec mattis eros sollicitudin.</h3>
 
 <div class="container">
   <h2>What do other have to say about this city</h2>
@@ -12,14 +10,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id placerat lorem. 
     <div class="row">
       <div class="col-sm-3"> 
       <!-- author's image -->
-      <img src="http://placehold.it/200x200">
+      <img src="<%= @city.image %>">
       <!--  author's name -->
       </div>
-      <div class='col-sm-7 col-sm-offset-1'>
-        <!-- author's post content -->
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id placerat lorem. Integer a facilisis massa, gravida efficitur risus. Donec porttitor mi malesuada rhoncus convallis. Praesent sit amet consequat nisi. In id lacus viverra, bibendum lorem at, gravida quam. Donec sit amet mattis metus. Nulla consectetur nisi in cursus sagittis. Phasellus mollis nibh ac mauris pretium, quis rhoncus magna rutrum. Duis id arcu id metus facilisis lobortis. Phasellus condimentum ut
-      </div>
-      
+      <div class="row">
+        <% @posts.each do |post| %>
+          <div class='col-sm-7 col-sm-offset-1'>
+            <h3><%=post.title%></h3>
+            <p><%=post.content%></p>
+          </div>
+        <% end %>
     </div>
     </li>
   </ul>
