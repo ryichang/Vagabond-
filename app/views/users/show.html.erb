@@ -2,9 +2,12 @@
   <div class="row">
     <div class="col-sm-4">
       <img src="http://placehold.it/200x200">
-      insert users name
-      date joined 
-      current city
+      <br> 
+      <p><%= "#{@user.first_name} #{@user.last_name}"  %> </p>
+      <br>
+      <p><%= "Joined on #{@user.created_at.to_date.to_formatted_s(:long_ordinal)}" %></p>
+      <br>
+      <p><%= "Home City: #{@user.location}" %></p>
       <!-- TODO change to link to specific user -->
       <button class='btn-primary'><%=link_to "Edit profile", '/' %></button>
     </div>

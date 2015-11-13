@@ -16,9 +16,13 @@
       
       
       <ul class="nav navbar-nav navbar-right">
-        <li class='logged_in'><a href="#">Welcome User</a></li>
-        <li class="logged_in"><a href="#">Log Out</a></li>
-        <li class="logged_out"><a href="#">Log In</a></li>
+      <% if logged_in? %> 
+        <% @user = current_user %> 
+        <li><a href="#"><%= "Welcome #{@user.first_name}" %></a></li>
+        <li><%= button_to "Log out", logout_path, class:"btn btn-danger", method: :delete %></li>
+      <% else %> 
+        <li><%= button_to "Log in", new_session_path, class:"btn btn-default", method: :get %></li>
+      <% end %> 
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
