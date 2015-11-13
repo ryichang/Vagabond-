@@ -14,11 +14,16 @@
     <div class="col-sm-8">
       <!-- TODO run loop for all posts here -->
       <ul>
+        <% @user.posts.each do |p| %> 
         <li>
-          post information here
+          <%= link_to "#{p.title}", post_path(p) %>
+          <br>
+          <%= p.content %> 
+          <br>
           <button>edit</button>
           <button>delete post</button>
         </li>
+        <% end %> 
       </ul>
     </div>
   </div>
