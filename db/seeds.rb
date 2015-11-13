@@ -9,6 +9,9 @@
 require 'ffaker' 
 
 User.destroy_all
+City.destroy_all
+Post.destroy_all
+
 
 
 10.times do 
@@ -32,7 +35,7 @@ User.destroy_all
 	  new_post.title = FFaker::Movie.title
 	  new_post.content = FFaker::Lorem.paragraph
 	  
-	  new_post.city_id = 1 + rand(30)
+	  new_post.city_id = rand(1..4)
 	  new_post.save
 	  new_user.posts.push new_post
 	end
@@ -40,9 +43,11 @@ User.destroy_all
 
 end
 
-# seeds for citys
-# 5.times do
-#   city_params= Hash.new
-#   city_params[:name] = FFaker::Address.city
-#   city_params[:image] = FFaker::Avatar.image
-# end
+cities = City.create([{ name: 'San Francisco', image: 'http://static3.businessinsider.com/image/51d31170eab8ea101b000001/san-francisco-is-americas-snobbiest-city-according-to-the-rest-of-the-country.jpg' }, { name: 'Seattle', image: 'http://assets3.thrillist.com/v1/image/1528432/size/tl-horizontal_main/20-actually-great-seattle-dates-under-20' }, {name: 'Portland', image: 'https://images.trvl-media.com/media/content/shared/images/travelguides/destination/178299/Portland-20917.jpg'}, {name: 'San Diego', image: 'http://i.kinja-img.com/gawker-media/image/upload/xf78kwfbb9ze3qrxo9to.bmp'}])
+
+
+
+
+
+
+
