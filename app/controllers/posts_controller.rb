@@ -11,13 +11,28 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find_by_id(params[:id])
-    @user = User.find_by_id(@post.user_id)
+    @post = Post.find(params[:id])
+    @user = User.find(current_user)
     render :show
-    p "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PostsController#{params[:id]}"
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+    @user = User.find(current_user)
+    render :edit
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    post_params = params.require(:post).permit(:title, :content)
+    @post.update_attributes(post_params)
+    redirect_to @post
   end
 
   def destroy
+    @user = User.find(current_user)
+    Post.destroy(params[:id])
+    redirect_to @user
   end
   
 

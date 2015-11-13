@@ -20,8 +20,8 @@
           <br>
           <%= p.content %> 
           <br>
-          <button>edit</button>
-          <button>delete post</button>
+          <%= button_to "Edit Post", edit_post_path(p), class:"btn btn-default", method: :get %>
+          <%= button_to "Delete Post", post_path(p), class:"btn btn-default", method: :delete %>
         </li>
         <% end %> 
       </ul>

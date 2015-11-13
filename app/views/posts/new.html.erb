@@ -1,9 +1,9 @@
 <%= form_for @post do |f| %>
   <div>
-    <%= f.text_field :title, placeholder: "Title" %>
+    <%= f.text_field :title, class:"form-control", placeholder: "Title" %>
   </div>
   <div>
-    <%= f.text_field :content, placeholder: "Content" %>
+    <%= f.text_area :content, class:"form-control", placeholder: "Content" %>
   </div>
-  <%= f.submit "Submit" %>
+  <%= f.submit "Submit", class:"btn btn-primary btn-lg pull-right" %>
 <% end %>
