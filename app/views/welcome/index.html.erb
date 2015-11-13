@@ -11,7 +11,25 @@
       <!-- TODO change to link to sign up page -->
       <%= button_to "Sign Up", new_user_path, class:"btn btn-default", method: :get %>
     </div>
-  
   </div>
+
 </div>
+    
+<div class="container">
+  <div class="row">  
+    <% @cities.each do |city| %>
+      <div class="col-sm-3">
+        <div class="thumbnail">
+          <img src="<%=city.image%>" >
+            <div class="caption">
+             <h3><%=city.name%></h3>
+        
+              <p><%= link_to "View City", city_path(city) %> </p>
+            </div>
+        </div>
+      </div>
+    <% end %>
+  </div> 
+</div>
+
 
