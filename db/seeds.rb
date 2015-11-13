@@ -23,3 +23,20 @@ User.destroy_all
 	 new_user = User.create(user_params)
 
 end
+
+# seeds for posts
+5.times do
+  post_params = Hash.new
+  post_params[:title] = FFaker::Movie.title
+  post_params[:content]= FFaker::Lorem.paragraph
+  post_params[:user_id]= 1 + rand(5)
+  post_params[:city_id]= 1 + rand(5)
+
+end
+
+# seeds for citys
+5.times do
+  city_params= Hash.new
+  city_params[:name] = FFaker::Address.city
+  city_params[:image] = FFaker::Avatar.image
+end

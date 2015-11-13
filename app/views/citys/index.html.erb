@@ -1,3 +1,18 @@
+<h1>All the Cities that have been visited:</h1>
 
+<!-- Create a new city -->
+<h2>Have you been somewhere new?</h2>
+<button>Add a city!</button>
 
-YOOOOOO
+<div class="container">
+  <div class="row">
+  <!-- run loop to display all the cities -->
+    <% citys.each do |c| %>
+      <div class="col-sm-4">
+        <%= c.image %>
+        <%= c.name %>
+      </div>
+    <% end %>
+  
+  </div>
+</div>
