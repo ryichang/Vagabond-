@@ -15,10 +15,25 @@ class PostsController < ApplicationController
     @user = User.find_by_id(@post.user_id)
     @city = City.find_by_id(@post.city_id)
     render :show
-    p "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! PostsController#{params[:id]}"
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+    @user = User.find(current_user)
+    render :edit
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    post_params = params.require(:post).permit(:title, :content)
+    @post.update_attributes(post_params)
+    redirect_to @post
   end
 
   def destroy
+    @user = User.find(current_user)
+    Post.destroy(params[:id])
+    redirect_to @user
   end
   
 

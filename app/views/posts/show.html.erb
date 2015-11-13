@@ -1,17 +1,23 @@
 <div class="container">
   <div class="row">
+
     <div class="col-sm-4">
       <img src="<%=@city.image%>">
       <div>
         <%= link_to "View City", city_path(@city) %>
       </div>
       <div>
-      <%= User.find(@post.user_id).first_name %> 
+      <%= User.find(current_user).first_name %>
       </div>
     </div>
+
     <div class="col-sm-8">
       <h1><%= @post.title %></h1>
       <p><%= @post.content %></p>
     </div>
+
+    <%= button_to "Edit Post", edit_post_path, class:"btn btn-default", method: :get %>
+    <%= button_to "Delete Post", post_path, class:"btn btn-default", method: :delete %>
+
   </div>
 </div>
