@@ -11,8 +11,9 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
-    @user = User.find(current_user)
+    @post = Post.find_by_id(params[:id])
+    @user = User.find_by_id(@post.user_id)
+    @city = City.find_by_id(@post.city_id)
     render :show
   end
 

@@ -2,7 +2,10 @@
   <div class="row">
 
     <div class="col-sm-4">
-      <img src="http://placehold.it/200x200">
+      <img src="<%=@city.image%>">
+      <div>
+        <%= link_to "View City", city_path(@city) %>
+      </div>
       <div>
       <%= User.find(current_user).first_name %>
       </div>
