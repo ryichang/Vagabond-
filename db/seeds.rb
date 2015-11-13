@@ -10,7 +10,8 @@ require 'ffaker'
 
 User.destroy_all
 
-5.times do 
+
+10.times do 
 
 	# build the user params
 	user_params = Hash.new
@@ -22,21 +23,26 @@ User.destroy_all
 	 # save the user
 	 new_user = User.create(user_params)
 
-end
 
-# seeds for posts
-5.times do
-  post_params = Hash.new
-  post_params[:title] = FFaker::Movie.title
-  post_params[:content]= FFaker::Lorem.paragraph
-  post_params[:user_id]= 1 + rand(5)
-  post_params[:city_id]= 1 + rand(5)
+
+	# seeds for posts
+	5.times do
+
+	  new_post = Post.new
+	  new_post.title = FFaker::Movie.title
+	  new_post.content = FFaker::Lorem.paragraph
+	  
+	  new_post.city_id = 1 + rand(30)
+	  new_post.save
+	  new_user.posts.push new_post
+	end
+
 
 end
 
 # seeds for citys
-5.times do
-  city_params= Hash.new
-  city_params[:name] = FFaker::Address.city
-  city_params[:image] = FFaker::Avatar.image
-end
+# 5.times do
+#   city_params= Hash.new
+#   city_params[:name] = FFaker::Address.city
+#   city_params[:image] = FFaker::Avatar.image
+# end
