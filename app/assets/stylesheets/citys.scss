@@ -5,3 +5,29 @@ ul {
 	list-style-type: none;
 }
 
+
+
+.jumbotron {
+	background-color: black;
+	background: transparent;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(http://www.lincolnuca.edu/images/banner2.jpg);
+	min-height: 300px;
+
+}
+
+.city_image img{
+	max-width: 250px;
+	max-height: 300px;
+
+}
+
+.city_posts{
+	clear: both;
+}
+
+.city_post_form{
+	
+}

@@ -4,6 +4,22 @@
   </div>
   <div>
     <%= f.text_area :content, class:"form-control", placeholder: "Content" %>
+    <%=f.hidden_field :user_id, :value => current_user.id %>
   </div>
+  <div>
+    <!-- create a drop down menue with all of the cities -->
+    <%= fields_for (@cities) do |c| %>
+      <div class= 'field'>
+        <%= c.label "All Cities" %> </br>
+        <%= f.collection_select :city_id, @cities, :id, :name, include_blank: true %>
+      </div>
+    <% end %>
+  </div>
+  <div>
+  <!-- grab user id -->
+ 
+
+  </div>
+
   <%= f.submit "Submit", class:"btn btn-primary btn-lg pull-right" %>
 <% end %>
