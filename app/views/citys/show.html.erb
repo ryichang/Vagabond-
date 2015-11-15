@@ -1,21 +1,19 @@
-<div class="jumbotron"><h1><%=@city.name%></h1></div>
-
+<div style= "background-image: url(<%= @city.image %>)"; class="jumbotron"><h1><%=@city.name%></h1></div>
 
 <div class="container">
-  <h2>What do other have to say about this city</h2>
-
-  <ul>
-      <!-- list through all the posts made for this city -->
-    <li>
+<!-- City picture and add post form-->
     <div class="row">
-      <div class="col-sm-3"> 
-      <!-- author's image -->
+      <div class="col-sm-3 city_image"> 
+      <!-- city image -->
       <img src="<%= @city.image %>">
-      <!--  author's name -->
       </div>
-      <div class="row">
+      <div class="city_post_form">
+        
+
+      <div class="row city_posts">
+        <h2>What do other have to say about this city</h2>
         <% @posts.each do |post| %>
-          <div class='col-sm-7 col-sm-offset-1'>
+          <div class='col-sm-7'>
             <h3><%= link_to "#{post.title}", post_path(post) %></h3>
             <p><%=post.content%></p>
           </div>
