@@ -1,7 +1,5 @@
-// Place all the styles related to the posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
+//post new
 #newPostForm {
 	margin: auto;
 	
@@ -11,6 +9,17 @@
 
 }
 
-.postImg {
-	max-width: 200px;
+//post show 
+.postImg img{
+	max-width: 280px;
+	border-radius: 8px;
+	box-shadow: 8px 8px 3px #888888;
+	margin-bottom: 15px;
 }
+
+.pairBtn {
+	float: right;
+	display: inline;
+	margin-right: 5px;
+}
+

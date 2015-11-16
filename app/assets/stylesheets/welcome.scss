@@ -1,15 +1,36 @@
+//home page
+
+#splash {
+	background-color: #990000;
+	margin-top: -50px;
+	min-height: 600px;
+}
+
+#welcome {
+	padding-top: 150px;
+	color: white;
+}
+
 .btn-primary {
     box-shadow: 0 3px 0 0 #007299;
     border-radius: 5px;
 }
 
-img {
-	height: 400px;
 
+.city_display{
+	padding-top: 20px;
 }
-
 
 body {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 700;
+
+}
+
+.thumbnail img{
+	max-width: 180px;
+	min-height: 160px;
+	border-radius: 8px;
+	box-shadow: 8px 8px 3px #888888;
+	margin-bottom: 15px;
 }

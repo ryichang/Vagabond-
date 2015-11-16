@@ -2,11 +2,14 @@
   <div class="row">
 
     <div class="col-sm-4 postImg">
-      <img src="<%=@city.image%>">
+    <%= link_to city_path(@city) do %>
+      <img src="<%=@city.image%>" >
+    <%end%>
       <div>
         <%= link_to "View City", city_path(@city) %>
       </div>
       <div>
+      <!-- TODO: should display the author of post -->
       <%= User.find(current_user).first_name %>
       </div>
     </div>
@@ -16,8 +19,14 @@
       <p><%= @post.content %></p>
     </div>
 
-    <%= button_to "Edit Post", edit_post_path, class:"btn btn-default", method: :get %>
-    <%= button_to "Delete Post", post_path, class:"btn btn-default", method: :delete %>
+    <!-- TODO customization:  when this is the current users post display editing buttons -->
+
+    <div class="col-sm-8">
+    <%= button_to "Edit Post", edit_post_path, class:"pairBtn btn btn-default raised", method: :get %> 
+    <%= button_to "Delete Post", post_path, class:"pairBtn btn btn-default", method: :delete %>
+    </div>
+
+    <!-- TODO customization:  when this is not the current users post display add comment forms -->
 
   </div>
 </div>
