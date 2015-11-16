@@ -7,8 +7,23 @@
       <!-- city image -->
       <img src="<%= @city.image %>">
       </div>
-      <div class="city_post_form">
-        
+      <div class="city_post_form col-sm-7">
+        <div class="well">
+          <%= form_for @post do |f|  %>
+            <div>
+              <%= f.text_field :title, class:"form-control", placeholder: "Title" %> </br>
+              <%= f.text_area :content, class:"form-control", placeholder: "Content" %>
+              <!-- grab the id of the city through current page -->
+              <%=f.hidden_field :city_id, :value => @city.id %>
+
+              <!-- grab user id by session  -->
+              <%=f.hidden_field :user_id, :value => current_user.id %>
+            </div>
+            <%= f.submit "Submit", class:"btn btn-primary btn-lg pull-right" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
 
       <div class="row city_posts">
         <h2>What do other have to say about this city</h2>
