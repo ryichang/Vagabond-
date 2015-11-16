@@ -1,10 +1,15 @@
-// Place all the styles related to the citys controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
 ul {
 	list-style-type: none;
 }
-
+//cities index page 
+.thumbnail img{
+	max-width: 180px;
+	min-height: 160px;
+	border-radius: 8px;
+	box-shadow: 8px 8px 3px #888888;
+	margin-bottom: 15px;
+}
 
 //city show page
 .jumbotron {
@@ -39,4 +44,5 @@ ul {
 .city_post_form form{
 	border-radius: 8px;
 }
+
 
