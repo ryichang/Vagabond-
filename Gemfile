@@ -34,6 +34,9 @@ gem 'bootstrap-material-design'
 # Ffaker 
 gem 'ffaker'
 
+# google api
+gem 'google-api-client', '0.9.pre3'
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
