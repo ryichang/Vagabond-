@@ -9,11 +9,18 @@ class CitysController < ApplicationController
     @city = City.find(params[:id])
     @cities = City.all
     @posts = Post.where(city_id: @city)
+    @user = User.find(current_user)
+    @current_user= current_user
+    @post = Post.new
+    
     render :show
   end
 
   def new
     @city = City.new
+
+    @all.users = User.all
+    @posts= @city.posts.build
   end
 
   def create

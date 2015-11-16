@@ -3,24 +3,14 @@
 <head>
   <title>Vagabond</title>
 
-<!-- Bootstrap -->
 
-<!--  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
- <!-- Latest compiled and minified CSS -->
-<!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
- 
- <!--<script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script> -->
  <!-- Fonts -->
  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,600' rel='stylesheet' type='text/css'> 
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="application.html.scss">
-<link rel="stylesheet" href="citys.html.scss">
-<link rel="stylesheet" href="posts.html.scss">
-<link rel="stylesheet" href="users.html.scss">
-
-
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag params[:controller], 'data-turbolinks-track' => true %>
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
