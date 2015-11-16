@@ -1,7 +1,12 @@
 //home page
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
 
+}
+//section 1
 #splash {
-	background-color: #990000;
+	background-color: #821919;
 	margin-top: -50px;
 	min-height: 600px;
 }
@@ -10,6 +15,10 @@
 	padding-top: 150px;
 	color: white;
 }
+#splash_content {
+	padding-top: 70px;
+
+}
 
 .btn-primary {
     box-shadow: 0 3px 0 0 #007299;
@@ -17,14 +26,16 @@
 }
 
 
+//section 2
 .city_display{
 	padding-top: 20px;
 }
 
-body {
-	font-family: 'Roboto', sans-serif;
-	font-weight: 700;
 
+#splash .btn {
+	display: inline;
+	float: right;
+	color: white;
 }
 
 .thumbnail img{

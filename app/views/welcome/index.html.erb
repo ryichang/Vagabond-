@@ -3,14 +3,15 @@
     <div class="row">
       
       <div class="col-sm-6">
-        <img src="http://placehold.it/350x150">
+        <%= image_tag ('splash.gif')%>
       </div>
 
-      <div class="col-sm-6">
-        <h1>Catch Phrase</h1>
-        <h3>Text describing site function/purpose</h3>
+      <div id='splash_content' class="col-sm-6">
+        <h1>Travel Chatter</h1>
+        <h3>A place for people to leave posts about places they have been, things they have seen or things they have done around the world.</h3>
         <!-- TODO change to link to sign up page -->
         <%= button_to "Sign Up", new_user_path, class:"btn btn-default", method: :get %>
+        <p class="btn">Join the chatter and make an accout</p>
       </div>
     </div>
 
