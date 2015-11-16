@@ -1,27 +1,44 @@
 <div class="col-sm-4 col-sm-offset-4">
+	
+	
 	<%= form_for @user do |f| %>
 
-		<%= f.label :first_name %> 
-		<%= f.text_field :first_name, placeholder: "First Name", class:'form-control' %> 
-		<br>
 
-		<%= f.label :last_name %> 
-		<%= f.text_field :last_name, placeholder: "Last Name", class:'form-control' %> 
-		<br> 
+	<ul>
+		<% if @user.errors.any? %> 
+		<p>
+			<%= pluralize(@user.errors.count, "error") %> prevented the form from being saved:
+		</p>
+		<% @user.errors.full_messages.each do |message| %> 
+		<li><%= message %></li>
 
-		<%= f.label :location %>
-		<%= f.text_field :location, placeholder: "location", class:'form-control'%> 
-		<br> 
+		<% end %> 
+		<% end %> 
+	</ul>
+	
 
-		<%= f.label :email %> 
-		<%= f.text_field :email, class:'form-control' %>
-		<br>
-		
-		<%= f.label :password %> 
-		<%= f.password_field :password, class:'form-control' %>
-		<br>
-		<div class="text-right">
+	<%= f.label :first_name %> 
+	<%= f.text_field :first_name, placeholder: "First Name", class:'form-control', autofocus: true %> 
+	<br>
+
+	<%= f.label :last_name %> 
+	<%= f.text_field :last_name, placeholder: "Last Name", class:'form-control' %> 
+	<br> 
+
+	<%= f.label :location %>
+	<%= f.text_field :location, placeholder: "location", class:'form-control'%> 
+	<br> 
+
+	<%= f.label :email %> 
+	<%= f.text_field :email, class:'form-control' %>
+	<br>
+
+	<%= f.label :password %> 
+	<%= f.password_field :password, class:'form-control' %>
+	<br>
+	<div class="text-right">
 		<%= f.submit "Sign Up", class: 'btn btn-primary' %> 
-		</div>
+	</div>
+	
 	<% end %> 
 </div>
