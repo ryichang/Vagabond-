@@ -2,7 +2,21 @@
   <div id='newPostForm' class="col-md-12">
     <h1>Post about any city below:</h1>
     <div class="well">
+     
       <%= form_for @post do |f| %>
+
+      <ul>
+        <% if @post.errors.any? %> 
+        <p>
+          <%= pluralize(@post.errors.count, "error") %> prevented the form from being saved:
+        </p>
+        <% @post.errors.full_messages.each do |message| %> 
+        <li><%= message %></li>
+
+        <% end %> 
+        <% end %> 
+      </ul>
+      
         <div>
           <h3>Create a tile for your post:</h3>
           <p>This should help other users have a good idea about what your post topic is about.</p>

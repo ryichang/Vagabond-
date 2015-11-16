@@ -13,13 +13,18 @@ class PostsController < ApplicationController
     @current_user= current_user
     @cities = City.all
     @post.user_id = @current_user.id
+    if @post.save
+      redirect_to @post # <-- go to post
+    else 
+      render :new
+    end
+   
 
-    redirect_to @post # <-- go to post
   end
 
   def show
     @post = Post.find_by_id(params[:id])
-    @user = User.find_by_id(@post.user_id)
+    # @user = User.find_by_id(@post.user_id)
     @city = City.find_by_id(@post.city_id)
     @cities = City.all
     render :show
