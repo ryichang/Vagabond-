@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 	validates :email, uniqueness: true
 
   has_many :posts
-  has_many :citys, through: :posts
+  has_many :cities, through: :posts
 
   user = User.new
   user.valid? 

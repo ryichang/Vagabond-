@@ -9,6 +9,6 @@ Rails.application.routes.draw do
 
   resources :posts
 
-  resources :citys
+  resources :cities
 
 end

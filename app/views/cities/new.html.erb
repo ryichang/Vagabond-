@@ -1,0 +1,16 @@
+<%= form_for @city do |f| %>
+  
+  <div>
+    <h3>Add a new City:</h3>
+    <%= f.text_field :name, class:"form-control", placeholder: "City Name" %>
+  </div>
+  
+  <div>
+    <h3>Image of City:</h3>
+    <%= f.text_field :image, class:"form-control", placeholder: "Image URL" %>
+    <%=f.hidden_field :user_id, :value => current_user.id %>
+  </div>
+
+  <%= f.submit "Submit", class:"btn btn-primary btn-lg pull-right" %>
+
+<% end %>

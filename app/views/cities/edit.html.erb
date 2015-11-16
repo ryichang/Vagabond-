@@ -1,0 +1,7 @@
+<%= form_for @city do |f| %>
+
+  <%= f.text_field  :name, class:"form-control", placeholder: "City Name" %> 
+  <%= f.text_field :image, class:"form-control", placeholder: "Image URL" %>
+  <%= f.submit "Update Post", class:"btn btn-primary btn-lg pull-right" %>
+
+<% end %>
