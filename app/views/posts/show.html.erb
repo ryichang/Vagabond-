@@ -10,7 +10,7 @@
       </div>
       <div>
       <!-- TODO: should display the author of post -->
-      <%= User.find(current_user).first_name %>
+      <%= User.find(@post.user_id).first_name %>
       </div>
     </div>
 
@@ -20,12 +20,12 @@
     </div>
 
     <!-- TODO customization:  when this is the current users post display editing buttons -->
-
+    <% if current_user %>
     <div class="col-sm-8">
     <%= button_to "Edit Post", edit_post_path, class:"pairBtn btn btn-default raised", method: :get %> 
     <%= button_to "Delete Post", post_path, class:"pairBtn btn btn-default", method: :delete %>
     </div>
-
+    <% end %>
     <!-- TODO customization:  when this is not the current users post display add comment forms -->
 
   </div>

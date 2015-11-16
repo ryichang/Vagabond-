@@ -19,7 +19,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by_id(params[:id])
-    @user = User.find_by_id(@post.user_id)
+    # @user = User.find_by_id(@post.user_id)
     @city = City.find_by_id(@post.city_id)
     @cities = City.all
     render :show
