@@ -6,7 +6,7 @@ ul {
 }
 
 
-
+//city show page
 .jumbotron {
 	background-color: black;
 	background: transparent;
@@ -20,20 +20,23 @@ ul {
 
 .jumbotron h1{
 	color: white;
+	text-shadow: 2px 2px #ff0000;
 	
 }
 
 .city_image img{
-	max-width: 250px;
-	max-height: 300px;
-
+	max-width: 280px;
+	border-radius: 8px;
+	box-shadow: 8px 8px 3px #888888;
+	margin-bottom: 15px;
 }
 
 .city_posts{
 	clear: both;
+
 }
 
-.city_post_form{
-	
+.city_post_form form{
+	border-radius: 8px;
 }
 

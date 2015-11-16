@@ -1,27 +1,31 @@
-<div class="container">
-  <div class="row">
-    
-    <div class="col-sm-6">
-      <img src="http://placehold.it/350x150">
+<div id='splash'>
+  <div id='welcome' class="container">
+    <div class="row">
+      
+      <div class="col-sm-6">
+        <img src="http://placehold.it/350x150">
+      </div>
+
+      <div class="col-sm-6">
+        <h1>Catch Phrase</h1>
+        <h3>Text describing site function/purpose</h3>
+        <!-- TODO change to link to sign up page -->
+        <%= button_to "Sign Up", new_user_path, class:"btn btn-default", method: :get %>
+      </div>
     </div>
 
-    <div class="col-sm-6">
-      <h1>Catch Phrase</h1>
-      <h3>Text describing site function/purpose</h3>
-      <!-- TODO change to link to sign up page -->
-      <%= button_to "Sign Up", new_user_path, class:"btn btn-default", method: :get %>
-    </div>
   </div>
-
 </div>
     
 <div class="container">
-  <div class="row">  
+  <div class="row city_display">  
     <% @cities.each do |city| %>
       <div class="col-sm-3">
         <div class="thumbnail">
-          <img src="<%=city.image%>" >
             <div class="caption">
+        <%= link_to city_path(city) do %>
+          <img src="<%=city.image%>" >
+        <%end%>
              <h3><%=city.name%></h3>
         
               <p><%= link_to "View City", city_path(city) %> </p>

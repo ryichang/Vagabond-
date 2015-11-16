@@ -21,12 +21,14 @@ class PostsController < ApplicationController
     @post = Post.find_by_id(params[:id])
     @user = User.find_by_id(@post.user_id)
     @city = City.find_by_id(@post.city_id)
+    @cities = City.all
     render :show
   end
 
   def edit
     @post = Post.find(params[:id])
     @user = User.find(current_user)
+    @cities = City.all
     render :edit
   end
 
@@ -34,12 +36,14 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     post_params = params.require(:post).permit(:title, :content)
     @post.update_attributes(post_params)
+    @cities = City.all
     redirect_to @post
   end
 
   def destroy
     @user = User.find(current_user)
     Post.destroy(params[:id])
+    @cities = City.all
     redirect_to @user
   end
   
