@@ -4,15 +4,24 @@
 <h2>Have you been somewhere new?</h2>
 <button>Add a city!</button>
 
+
+
 <div class="container">
-  <div class="row">
-  <!-- run loop to display all the cities -->
-    <% citys.each do |c| %>
-      <div class="col-sm-4">
-        <%= c.image %>
-        <%= c.name %>
+  <div class="row city_display">  
+    <% @cities.each do |city| %>
+      <div class="col-sm-3">
+        <div class="thumbnail">
+            <div class="caption">
+            <%= link_to city_path(city) do %>
+              <img src="<%=city.image%>" >
+            <%end%>
+            <h3><%=city.name%></h3>
+            <p><%= link_to "View City", city_path(city) %> </p>
+            <!-- TODO: add how many posts there are per city -->
+            </div>
+        </div>
       </div>
     <% end %>
-  
-  </div>
+  </div> 
 </div>
+

@@ -1,7 +1,7 @@
 class CitiesController < ApplicationController
 
   def index
-    @city = City.all
+    @cities = City.all.order(:name)
     render :index
   end
 
