@@ -11,6 +11,7 @@ class CitysController < ApplicationController
     @posts = Post.where(city_id: @city)
     @user = User.find(current_user)
     @current_user= current_user
+    @post = Post.new
     
     render :show
   end
