@@ -1,0 +1,19 @@
+/* line 3, /Users/iluvmildew/dev/vagabond/app/assets/stylesheets/posts.scss */
+#newPostForm {
+  margin: auto;
+}
+
+/* line 13, /Users/iluvmildew/dev/vagabond/app/assets/stylesheets/posts.scss */
+.postImg img {
+  max-width: 280px;
+  border-radius: 8px;
+  box-shadow: 8px 8px 3px #888888;
+  margin-bottom: 15px;
+}
+
+/* line 20, /Users/iluvmildew/dev/vagabond/app/assets/stylesheets/posts.scss */
+.pairBtn {
+  float: right;
+  display: inline;
+  margin-right: 5px;
+}

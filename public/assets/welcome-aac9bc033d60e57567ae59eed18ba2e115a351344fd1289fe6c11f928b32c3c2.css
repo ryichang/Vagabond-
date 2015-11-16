@@ -1,0 +1,38 @@
+/* line 3, /Users/iluvmildew/dev/vagabond/app/assets/stylesheets/welcome.scss */
+#splash {
+  background-color: #990000;
+  margin-top: -50px;
+  min-height: 600px;
+}
+
+/* line 9, /Users/iluvmildew/dev/vagabond/app/assets/stylesheets/welcome.scss */
+#welcome {
+  padding-top: 150px;
+  color: white;
+}
+
+/* line 14, /Users/iluvmildew/dev/vagabond/app/assets/stylesheets/welcome.scss */
+.btn-primary {
+  box-shadow: 0 3px 0 0 #007299;
+  border-radius: 5px;
+}
+
+/* line 20, /Users/iluvmildew/dev/vagabond/app/assets/stylesheets/welcome.scss */
+.city_display {
+  padding-top: 20px;
+}
+
+/* line 24, /Users/iluvmildew/dev/vagabond/app/assets/stylesheets/welcome.scss */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+/* line 30, /Users/iluvmildew/dev/vagabond/app/assets/stylesheets/welcome.scss */
+.thumbnail img {
+  max-width: 180px;
+  min-height: 160px;
+  border-radius: 8px;
+  box-shadow: 8px 8px 3px #888888;
+  margin-bottom: 15px;
+}

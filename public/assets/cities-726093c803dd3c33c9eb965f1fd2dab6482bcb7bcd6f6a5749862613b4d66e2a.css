@@ -1,0 +1,48 @@
+/* line 2, /Users/iluvmildew/dev/vagabond/app/assets/stylesheets/cities.scss */
+ul {
+  list-style-type: none;
+}
+
+/* line 6, /Users/iluvmildew/dev/vagabond/app/assets/stylesheets/cities.scss */
+.thumbnail img {
+  max-width: 180px;
+  min-height: 160px;
+  border-radius: 8px;
+  box-shadow: 8px 8px 3px #888888;
+  margin-bottom: 15px;
+}
+
+/* line 15, /Users/iluvmildew/dev/vagabond/app/assets/stylesheets/cities.scss */
+.jumbotron {
+  background-color: black;
+  background: transparent;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(http://www.lincolnuca.edu/images/banner2.jpg);
+  min-height: 300px;
+}
+
+/* line 26, /Users/iluvmildew/dev/vagabond/app/assets/stylesheets/cities.scss */
+.jumbotron h1 {
+  color: white;
+  text-shadow: 2px 2px #ff0000;
+}
+
+/* line 32, /Users/iluvmildew/dev/vagabond/app/assets/stylesheets/cities.scss */
+.city_image img {
+  max-width: 280px;
+  border-radius: 8px;
+  box-shadow: 8px 8px 3px #888888;
+  margin-bottom: 15px;
+}
+
+/* line 39, /Users/iluvmildew/dev/vagabond/app/assets/stylesheets/cities.scss */
+.city_posts {
+  clear: both;
+}
+
+/* line 44, /Users/iluvmildew/dev/vagabond/app/assets/stylesheets/cities.scss */
+.city_post_form form {
+  border-radius: 8px;
+}
