@@ -2,31 +2,61 @@
   <div class="row">
 
     <div class="col-sm-4 postImg">
-    <%= link_to city_path(@city) do %>
-      <img src="<%=@city.image%>" >
-    <%end%>
+      <%= link_to city_path(@city) do %>
+        <img src="<%=@city.image%>" >
+      <%end%>
+      
       <div>
         <%= link_to "View City", city_path(@city) %> 
       </div>
+      
       <div>
-      <!-- TODO: should display the author of post -->
-      <p>Author: <%= User.find(@post.user_id).first_name %> <%= User.find(@post.user_id).last_name %></p>
+        <!-- TODO: should display the author of post -->
+        <p>Author: <%= User.find(@post.user_id).first_name %> <%= User.find(@post.user_id).last_name %></p>
       </div>
+
+
     </div>
 
     <div class="col-sm-8">
       <h1><%= @post.title %></h1>
       <p><%= @post.content %></p>
+      <!-- TODO customization:  when this is the current users post display editing buttons -->
+      <% if session[:user_id] == @user.id %>
+        <div class="row">
+          <%= button_to "Edit Post", edit_post_path, class:"pairBtn btn btn-default raised", method: :get %> 
+          <%= button_to "Delete Post", post_path, class:"pairBtn btn btn-default", method: :delete %>
+        </div>
+      <% end %>
+
+      <!-- Show Comments -->
+       <div class="row">
+       <h2> Comments: </h2>
+        <ul>
+          <% @post.comments.each do |c| %>
+          <li> <%= c.content %> </li>
+          <% end %>
+        </ul>
+      </div>
+      <!-- Add Comment Form -->
+      <div class="row">
+        <h2>Add a comment:</h2>
+        <%= form_for([@post, @post.comments.build]) do |f| %>
+          <div class="field">
+            <%= f.text_area :content %>
+          </div>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+        <% end %>
+      </div>
+      <!--  -->
+
     </div>
 
-    <!-- TODO customization:  when this is the current users post display editing buttons -->
-    <% if session[:user_id] == @user.id %>
-    <div class="col-sm-8">
-    <%= button_to "Edit Post", edit_post_path, class:"pairBtn btn btn-default raised", method: :get %> 
-    <%= button_to "Delete Post", post_path, class:"pairBtn btn btn-default", method: :delete %>
-    </div>
-    <% end %>
+
     <!-- TODO customization:  when this is not the current users post display add comment forms -->
+
 
   </div>
 </div>
