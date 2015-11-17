@@ -1,3 +1,21 @@
+//new user
+section {
+  width: 100%;
+  padding: 0 7%;
+  display: table;
+  margin: 0;
+  max-width: none;
+  height: 100vh;
+  
+  &:nth-of-type(2n) {
+    background-color: #ffffff;
+  }
+}
+
+.intro {
+  height: 85vh;
+}
+
 //user profile
 .profile_pic img{
 	width: 230px;
@@ -6,7 +24,7 @@
 }
 
 
-//posts list
+//user profile posts list
 ul {
 	list-style-type: none;
 }
@@ -17,6 +35,7 @@ ul {
 	margin-right: 5px;
 }
 
-.well {
+h1 {
+	font-family: 'Satisfy', cursive;
 
 }
