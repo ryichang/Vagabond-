@@ -36,6 +36,9 @@ gem 'ffaker'
 
 # google api
 gem 'google-api-client', '0.9.pre3'
+gem 'gmaps4rails'
+
+gem 'underscore-rails' 
 
 # Use Unicorn as the app server
 # gem 'unicorn'
