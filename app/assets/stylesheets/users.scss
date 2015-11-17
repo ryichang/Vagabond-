@@ -1,3 +1,22 @@
-// Place all the styles related to the users controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+//user profile
+.profile_pic img{
+	width: 230px;
+	max-height: 240px;
+	border-radius: 8px;
+}
+
+
+//posts list
+ul {
+	list-style-type: none;
+}
+
+.pairBtn {
+	float: right;
+	display: inline;
+	margin-right: 5px;
+}
+
+.well {
+
+}
