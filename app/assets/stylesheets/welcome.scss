@@ -10,6 +10,7 @@ body {
 	font-size: 30px;
 }
 
+
 //set sections for proper screen display
 section {
   width: 100%;
@@ -33,6 +34,10 @@ section {
   display: table-cell;
   vertical-align: middle;
 }
+
+
+
+	
 
 //section 1
 #splash {
@@ -89,3 +94,7 @@ section {
 	border-radius: 8px;
 }
 
+#map {
+	width: 800px;
+	height: 400px;
+}

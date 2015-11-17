@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
 	has_secure_password
 	validates :email, uniqueness: true
+  validates_length_of :first_name, :allow_blank => false
+  validates_length_of :last_name, :allow_blank => false
+  validates_length_of :location, :allow_blank => false
 
   has_many :posts
   has_many :cities, through: :posts
