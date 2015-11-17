@@ -1,4 +1,14 @@
-<div style= "background-image: url(<%= @city.image %>)"; class="jumbotron"><h1><%=@city.name%></h1></div>
+<div style= "background-image: url(<%= @city.image %>)"; class="jumbotron"><h1><%=@city.name%></h1>
+<div class="pull-right">
+<iframe
+  width="600"
+  height="400"
+  frameborder="1" style="border:3"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCYDJAwjEnJEDEHD0q7zobrgd7XhkR871o
+    &q=<%=@city.name%>" allowfullscreen>
+</iframe>
+</div>
+</div>
 
 <div class="container">
 <!-- City picture and add post form-->
@@ -8,10 +18,10 @@
     <!-- city image -->
     <img src="<%= @city.image %>">
     </div>
-
+<% if current_user %>
     <div class="col-sm-8">
       <div class="well city_post_form">
-      <% if current_user %>
+      
         <%= form_for @post do |f|  %>
           <div>
             <%= f.text_field :title, class:"form-control", placeholder: "Title" %> </br>
@@ -24,9 +34,10 @@
           </div>
           <%= f.submit "Submit", class:"btn btn-primary btn-lg pull-right" %>
         <% end %>
-        <% end %>
+        
       </div>
     </div>
+    <% end %>
   </div>
 </div>
     <div class="container">
