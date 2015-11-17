@@ -24,7 +24,7 @@
     <div class="row ">  
       <% @cities.each do |city| %>
         <div class="col-sm-3 city_display">
-          <div class="thumbnail">
+          <div class="thumbnail img-responsive">
           <%= link_to city_path(city) do %>
             <img src="<%=city.image%>" >
           <%end%>
