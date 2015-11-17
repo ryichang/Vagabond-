@@ -1,10 +1,10 @@
 
-<div id='splash'>
-  <div id='welcome' class="container">
+<section id='splash'class='intro'>
+  <div id='welcome' class="container content">
     <div class="row">
       
       <div class="col-sm-6">
-        <%= image_tag ('splash.gif')%>
+        <%= image_tag ('splash.gif'), class: "img-responsive"%>
       </div>
 
       <div id='splash_content' class="col-sm-6">
@@ -12,31 +12,52 @@
         <h3>A place for people to leave posts about places they have been, things they have seen or things they have done around the world.</h3>
         <!-- TODO change to link to sign up page -->
         <%= button_to "Sign Up", new_user_path, class:"btn btn-default", method: :get %>
-        <p class="btn">Join the chatter and make an accout</p>
+        <p class="btn">Join the chatter and make an account</p>
       </div>
     </div>
+  </div> 
+</section> 
 
-  </div>
-</div>
-    
-<div class="container">
-  <div class="row city_display">  
-    <% @cities.each do |city| %>
-      <div class="col-sm-3">
-        <div class="thumbnail">
-            <div class="caption">
-        <%= link_to city_path(city) do %>
-          <img src="<%=city.image%>" >
-        <%end%>
-             <h3><%=city.name%></h3>
-        
-              <p><%= link_to "View City", city_path(city) %> </p>
-            </div>
+<section>
+  <div class="container">
+    <div class="row city_display">  
+      <% @cities.each do |city| %>
+        <div class="col-sm-3 card">
+          <div class="thumbnail">
+              <div class="caption">
+          <%= link_to city_path(city) do %>
+            <img src="<%=city.image%>" >
+          <%end%>
+               <h3><%=city.name%></h3>
+          
+                <p><%= link_to "View City", city_path(city) %> </p>
+              </div>
+          </div>
+        </div>
+      <% end %>
+    </div> 
+  </div> 
+</section>  
+
+
+<section>
+  <div id="splash_map" class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <div style= "width: 800px";>
+          <div id="map"> </div>
+        </div>
+
+      </div>
+      <div class="col-sm-4">
+        <div class="well">
+          <!-- TODO: add google Querry form -->
+          
         </div>
       </div>
-    <% end %>
+    </div>
   </div> 
-</div>
+</section>
 
 
     

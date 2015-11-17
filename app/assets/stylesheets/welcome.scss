@@ -11,22 +11,44 @@ body {
 }
 
 
-.map {
-	max-width: 200px;
-	
+//set sections for proper screen display
+section {
+  width: 100%;
+  padding: 0 7%;
+  display: table;
+  margin: 0;
+  max-width: none;
+  background-color: #cef6c3;
+  height: 100vh;
+  
+  &:nth-of-type(2n) {
+    background-color: #ffffff;
+  }
 }
+
+.intro {
+  height: 100vh;
+}
+
+.content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+
+
+	
 
 //section 1
 #splash {
 	background-color: #821919;
 	margin-top: -50px;
-	min-height: 600px;
 }
 
 #welcome {
-	padding-top: 150px;
 	color: white;
 }
+
 #splash_content {
 	padding-top: 70px;
 
@@ -43,6 +65,9 @@ body {
 	padding-top: 20px;
 }
 
+.card{
+	background-color: #cef6c3;
+}
 
 #splash .btn {
 	display: inline;
@@ -56,4 +81,20 @@ body {
 	border-radius: 8px;
 	box-shadow: 8px 8px 3px #888888;
 	margin-bottom: 15px;
+
+}
+
+//section 3
+#splash_map{
+	padding-top: 40px;
+
+}
+
+.well {
+	border-radius: 8px;
+}
+
+#map {
+	width: 800px;
+	height: 400px;
 }
