@@ -28,9 +28,9 @@
           <%= link_to city_path(city) do %>
             <img src="<%=city.image%>" >
           <%end%>
-               <h3><%=city.name%></h3>
-              <div class="caption">
-                <p><%= link_to "View City", city_path(city) %> </p>
+               <center><h3><%=city.name%></h3></center>
+              <div  class="caption">
+                <p align="right"><%= link_to "View City", city_path(city) %> </p>
               </div>
           </div>
         </div>
