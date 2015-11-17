@@ -8,7 +8,7 @@ class CitiesController < ApplicationController
   def show
     @city = City.find(params[:id])
     @cities = City.all
-    @posts = Post.where(city_id: @city)
+    @posts = Post.where(city_id: @city).order(created_at: :DESC)
     # @user = User.find(current_user)
     @current_user= current_user
     @post = Post.new

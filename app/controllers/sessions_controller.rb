@@ -6,7 +6,9 @@ class SessionsController < ApplicationController
 	end
 
 	 def create
+
     user_params = params.require(:user).permit(:email, :password)
+    # byebug
     @user = User.confirm(user_params)
     if @user
       login(@user)
@@ -15,6 +17,8 @@ class SessionsController < ApplicationController
       redirect_to new_session_path
     end
   end
+
+
 
   def destroy
       logout

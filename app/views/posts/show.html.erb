@@ -6,11 +6,11 @@
       <img src="<%=@city.image%>" >
     <%end%>
       <div>
-        <%= link_to "View City", city_path(@city) %>
+        <%= link_to "View City", city_path(@city) %> 
       </div>
       <div>
       <!-- TODO: should display the author of post -->
-      <%= User.find(@post.user_id).first_name %>
+      <p>Author: <%= User.find(@post.user_id).first_name %> <%= User.find(@post.user_id).last_name %></p>
       </div>
     </div>
 
@@ -20,7 +20,7 @@
     </div>
 
     <!-- TODO customization:  when this is the current users post display editing buttons -->
-    <% if current_user %>
+    <% if session[:user_id] == @user.id %>
     <div class="col-sm-8">
     <%= button_to "Edit Post", edit_post_path, class:"pairBtn btn btn-default raised", method: :get %> 
     <%= button_to "Delete Post", post_path, class:"pairBtn btn btn-default", method: :delete %>

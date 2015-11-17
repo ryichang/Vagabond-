@@ -18,4 +18,9 @@ class User < ActiveRecord::Base
   # def a_method_used_for_validation_purposes
   # 	errors.add(:email, "Email is already taken!")
   # end
+
+  def self.confirm(params)
+    @user = User.find_by({email: params[:email]})
+    @user.try(:authenticate, params[:password])
+  end
 end
