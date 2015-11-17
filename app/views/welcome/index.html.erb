@@ -36,16 +36,16 @@
   </div> 
 </div>
 
+<!-- map -->
 <div class="container">
   <div class="row">
-    <iframe
-  width="600"
-  height="450"
-  frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCYDJAwjEnJEDEHD0q7zobrgd7XhkR871o
-    &q=Seattle" allowfullscreen>
-</iframe>
+
+<% @cities.each do |city| %>
+
+<img src="http://maps.google.com/maps/api/staticmap?size=640x640&markers=color:red|label:S<%=/%7Ccity.name%>&sensor=false&key=AIzaSyDtH2qudt0qqC3na0iC31kLjrwJXgLHew0">
+
+<%end%>
+  
+
   </div>
 </div>
-
-
