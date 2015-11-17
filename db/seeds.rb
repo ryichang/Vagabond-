@@ -21,6 +21,7 @@ Post.destroy_all
 	 user_params[:first_name] = FFaker::Name.first_name
 	 user_params[:last_name] = FFaker::Name.last_name
 	 user_params[:location] = FFaker::Address.city
+	 user_params[:image_url] = "https://www.drupal.org/files/profile_default.jpg"
 	 user_params[:email] = FFaker::Internet.email
 	 user_params[:password]  = "123456"
 	 # save the user
