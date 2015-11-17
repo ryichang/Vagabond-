@@ -37,6 +37,7 @@
         <h2>What do other have to say about this city</h2>
         <% @posts.each do |post| %>
           <div class='col-sm-7'>
+          <img class='postpic' src='<%= User.find(post.user_id).image_url %>'
             <h3><%= link_to "#{post.title}", post_path(post) %></h3>
             <p><%=post.content%></p>
           </div>
