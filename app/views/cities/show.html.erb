@@ -1,27 +1,19 @@
-<div style= "background-image: url(<%= @city.image %>)"; class="jumbotron"><h1><%=@city.name%></h1>
-<div class="pull-right">
-<iframe
-  width="600"
-  height="400"
-  frameborder="1" style="border:3"
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCYDJAwjEnJEDEHD0q7zobrgd7XhkR871o
-    &q=<%=@city.name%>" allowfullscreen>
-</iframe>
+<div class="jumbotron">
+    <iframe id="kitty" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCYDJAwjEnJEDEHD0q7zobrgd7XhkR871o
+    &q=<%=@city.name%>"></iframe>
 </div>
-</div>
-
 <div class="container">
 <!-- City picture and add post form-->
   <div class="row">
-
-    <div class="col-sm-4 city_image"> 
+    <div class="col-sm-5 city_image"> 
+    <h1 class="cityName"><%=@city.name%></h1>
     <!-- city image -->
     <img src="<%= @city.image %>">
     </div>
 <% if current_user %>
-    <div class="col-sm-8">
-      <div class="well city_post_form">
-      
+    <div class="col-sm-7">
+      <div class="well city_post_form clearfix">
+      <h2>Create a new Post for <%=@city.name %></h2>
         <%= form_for @post do |f|  %>
           <div>
             <%= f.text_field :title, class:"form-control", placeholder: "Title" %> </br>
