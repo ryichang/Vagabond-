@@ -17,5 +17,25 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
 
+}
+
+//navigation bar
+#nav {
+    background-color: #cef6c3;
+    border-color: #42f513;
+    color: black;
+}
+
+.navbar-nav > li > a {
+    color: black;
+}
+
+.logo {
+	font-family: 'Satisfy', cursive;
+	font-size: 30px;
+}
 
