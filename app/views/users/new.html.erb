@@ -1,44 +1,39 @@
-<div class="col-sm-4 col-sm-offset-4">
-	
-	
-	<%= form_for @user do |f| %>
+<section class='intro'>
+  <div class="col-sm-8 col-sm-offset-2 well">
+  <h1>Sign up for Travel Chatter</h1>
+  	<%= form_for @user do |f| %>
+    	<ul>
+    		<% if @user.errors.any? %> 
+      		<p>
+      			<%= pluralize(@user.errors.count, "error") %> prevented the form from being saved:
+      		</p>
+      		<% @user.errors.full_messages.each do |message| %> 
+      		<li><%= message %></li>
+      		<% end %> 
+    		<% end %> 
+    	</ul>
+  	<%= f.label :first_name %> 
+  	<%= f.text_field :first_name, placeholder: "First Name", class:'form-control', autofocus: true %> 
+  	<br>
+  	<%= f.label :last_name %> 
+  	<%= f.text_field :last_name, placeholder: "Last Name", class:'form-control' %> 
+  	<br> 
+  	<%= f.label :location %>
+  	<%= f.text_field :location, placeholder: "location", class:'form-control'%> 
+  	<br> 
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url, placeholder: "Find a picture you like, right click and hit copy image url", class:'form-control'%> 
+    <br> 
+  	<%= f.label :email %> 
+  	<%= f.text_field :email, class:'form-control' %>
+  	<br>
+  	<%= f.label :password %> 
+  	<%= f.password_field :password, class:'form-control' %>
+  	<br>
+  	<div class="text-right">
+  		<%= f.submit "Sign Up", class: 'btn btn-primary' %> 
+  	</div>
+  	<% end %> 
+  </div>
+</section>
 
-
-	<ul>
-		<% if @user.errors.any? %> 
-		<p>
-			<%= pluralize(@user.errors.count, "error") %> prevented the form from being saved:
-		</p>
-		<% @user.errors.full_messages.each do |message| %> 
-		<li><%= message %></li>
-
-		<% end %> 
-		<% end %> 
-	</ul>
-	
-
-	<%= f.label :first_name %> 
-	<%= f.text_field :first_name, placeholder: "First Name", class:'form-control', autofocus: true %> 
-	<br>
-
-	<%= f.label :last_name %> 
-	<%= f.text_field :last_name, placeholder: "Last Name", class:'form-control' %> 
-	<br> 
-
-	<%= f.label :location %>
-	<%= f.text_field :location, placeholder: "location", class:'form-control'%> 
-	<br> 
-
-	<%= f.label :email %> 
-	<%= f.text_field :email, class:'form-control' %>
-	<br>
-
-	<%= f.label :password %> 
-	<%= f.password_field :password, class:'form-control' %>
-	<br>
-	<div class="text-right">
-		<%= f.submit "Sign Up", class: 'btn btn-primary' %> 
-	</div>
-	
-	<% end %> 
-</div>

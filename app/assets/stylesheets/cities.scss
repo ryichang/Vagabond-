@@ -12,28 +12,45 @@ ul {
 }
 
 //city show page
-.jumbotron {
-	background-color: black;
-	background: transparent;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-image: url(http://www.lincolnuca.edu/images/banner2.jpg);
-	min-height: 300px;
+div.jumbotron {
+	padding: 0;
+	height: 300px;
 
 }
 
-.jumbotron h1{
+.postpic {
+	max-width: 60px;
+}
+
+
+.cityName {
+	margin-top: -200px;
+	margin-bottom: 45px;
 	color: white;
 	text-shadow: 2px 2px #ff0000;
-	
+	font-weight: 700;
+	font-size: 50px;
+
+}
+
+div.jumbotron iframe {
+	margin: 0;
+	padding:0;
+	height: 100%;
+	width: 100%;
 }
 
 .city_image img{
-	max-width: 280px;
+	width: 340px;
 	border-radius: 8px;
 	box-shadow: 8px 8px 3px #888888;
 	margin-bottom: 15px;
+
+}
+
+.city_post_form form{
+	border-radius: 8px;
+
 }
 
 .city_posts{
@@ -41,8 +58,25 @@ ul {
 
 }
 
-.city_post_form form{
-	border-radius: 8px;
+//cities new
+section {
+  width: 100%;
+  padding: 0 7%;
+  display: table;
+  margin: 0;
+  max-width: none;
+  height: 100vh;
+  
+  &:nth-of-type(2n) {
+    background-color: #ffffff;
+  }
 }
+
+.intro {
+  height: 85vh;
+}
+
+
+
 
 

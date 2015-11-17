@@ -1,3 +1,5 @@
+<section class='intro'>
+<div class="col-sm-10 col col-sm-offset-1 well clearfix">
 <%= form_for @city do |f| %>
   
   <div>
@@ -7,10 +9,13 @@
   
   <div>
     <h3>Image of City:</h3>
-    <%= f.text_field :image, class:"form-control", placeholder: "Image URL" %>
+    <%= f.text_field :image, class:"form-control", placeholder: "Image URL - Find a picture you like on the web, right click and hit copy image url" %>
     <%=f.hidden_field :user_id, :value => current_user.id %>
   </div>
 
   <%= f.submit "Submit", class:"btn btn-primary btn-lg pull-right" %>
 
 <% end %>
+</div>
+  
+</section>
