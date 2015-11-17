@@ -1,9 +1,17 @@
-<%= form_for @user do |f| %>
+<section class='intro'>
+  <div class="col-sm-8 col-sm-offset-2 well">
+  <h2>Edit your profile below:</h2>
+    <%= form_for @user do |f| %>
 
-    <%= f.text_field  :first_name, class:"form-control", placeholder:"First name" %> 
-    <%= f.text_area :last_name, class:"form-control", placeholder:"Last name" %>
-    <%= f.text_field :location, class:"form-control", placeholder:"Home city"%>
-    <%= f.text_field :image_url, class:"form-control", placeholder:"Find a picture you like, right click and hit copy image url"%>
-    <%= f.submit "Update Profile", class:"btn btn-primary btn-lg pull-right" %>
+        <%= f.text_field  :first_name, class:"form-control", placeholder:"First name" %> 
+        </br>
+        <%= f.text_area :last_name, class:"form-control", placeholder:"Last name" %>
+        </br>
+        <%= f.text_field :location, class:"form-control", placeholder:"Home city"%>
+        </br>
+        <%= f.text_field :image_url, class:"form-control", placeholder:"Find a picture you like, right click and hit copy image url"%>
+        <%= f.submit "Update Profile", class:"btn close pull-right" %>
 
-<% end %>
+    <% end %>
+  </div>
+</section>

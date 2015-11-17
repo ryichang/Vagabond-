@@ -23,6 +23,8 @@ div.jumbotron {
 	float: right;
 	margin-right: 15px;
 	margin-top: 10px;
+	border-radius: 8px;
+	box-shadow: 8px 8px 3px #888888; 
 }
 
 
@@ -54,6 +56,10 @@ div.jumbotron iframe {
 .city_post_form form{
 	border-radius: 8px;
 
+}
+
+.city_post_form h2{
+	font-family: 'Satisfy', cursive;
 }
 
 .city_posts{
